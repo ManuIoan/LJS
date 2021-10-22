@@ -68,6 +68,77 @@ getWage: function()
   //poly-many   morph-form ------> many forms
   // is a technic that
 
+// const circle = {
+//     radius: 1,
+//     location:{
+//         x: 1,
+//         y: 1
+//     },
+//     //properties
+//     draw: function()
+//     {
+//         console.log('draw');
+//     }
+//     //a method
 
 
+// };
+
+// //Factory Function
+
+// function createCircle(radius)
+// {
+// return {
+//     radius,
+//     draw: function(){
+//         console.log('draw');
+//     }
+
+// }
+// }
+
+
+
+// const circle = createCircle(1);
+
+
+// // Constructor Function
+// function Circle(radius){
+//     this.radius = radius;
+//     this.draw = function(){
+//         console.log('Draw');
+//     }
+
+// }
+
+// const another = new Circle(1);
+
+
+let x= {};
+// Primitive are copied by their value 
+// Objects are copied by their reference
+
+
+
+
+
+
+
+//adding/removing properties
+
+
+// Constructor Function
+function Circle(radius){
+    this.radius = radius;
+    this.draw = function(){
+        console.log('Draw');
+    }
+
+}
+
+const circle = new Circle(1);
+circle.location = {x: 1};
+circle['location'] = {x:2};
+
+delete circle.location;
   
