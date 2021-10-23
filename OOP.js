@@ -114,7 +114,7 @@ getWage: function()
 // const another = new Circle(1);
 
 
-let x= {};
+
 // Primitive are copied by their value 
 // Objects are copied by their reference
 
@@ -130,6 +130,13 @@ let x= {};
 // Constructor Function
 function Circle(radius){
     this.radius = radius;
+
+    this.defaultLocation = {x:0, y:0};
+    
+    this.computeOptimumLocation  = function(){
+        //....
+    }
+
     this.draw = function(){
         console.log('Draw');
     }
@@ -137,8 +144,7 @@ function Circle(radius){
 }
 
 const circle = new Circle(1);
-circle.location = {x: 1};
-circle['location'] = {x:2};
 
-delete circle.location;
-  
+circle.
+
+
