@@ -128,23 +128,44 @@ getWage: function()
 
 
 // Constructor Function
-function Circle(radius){
-    this.radius = radius;
+// function Circle(radius){
+//     this.radius = radius;
 
-    this.defaultLocation = {x:0, y:0};
+//     this.defaultLocation = {x:0, y:0};
     
-    this.computeOptimumLocation  = function(){
-        //....
-    }
+//     this.computeOptimumLocation  = function(){
+//         //....
+//     }
 
-    this.draw = function(){
-        console.log('Draw');
-    }
+//     this.draw = function(){
+//         console.log('Draw');
+//     }
 
+// }
+
+// const circle = new Circle(1);
+
+// circle.
+
+
+
+
+let x = [12342, 32223, 6555, 555, 4554];
+let i =0;
+while(i<=x.length)
+{
+   let c=x[i]
+   let y=0;
+   while(c)
+   {
+       y=y*10+c%10;
+       c= Math.floor(c/10);
+       
+
+       
+
+   }
+    if(x[i]===y)
+    console.log(x[i]);
+    i++;
 }
-
-const circle = new Circle(1);
-
-circle.
-
-
