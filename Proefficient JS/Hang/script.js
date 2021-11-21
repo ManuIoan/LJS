@@ -117,4 +117,10 @@ const next = () => {
     start()
 };
 
+const chng = ()=>{
+    alert = document.querySelector(".alert");
+    alert.innerHTML = "";
+}
+
+
 start()
