@@ -40,16 +40,38 @@ const start = ()=>{
   
      if(lis['ok']==1)
      {
-     but =but + `<div class="task">
-    <p class="scris">${lis['details']}</p>
+     but =but + `<div class="task" >
+    <p class="scris" id="cul${p}" value="0">${lis['details']}</p>
     <button class="but bi bi-trash" onClick="delete2(${p})" type="button"></button>
+    <button class="but2 bi bi-bookmark-check " onClick="change(${p})" type="button"></button>
+    
     </div>`
      }
-        p++
-   
+       
+        
+
+        
+     
+     p++
     })
     apv.innerHTML = but
-  
+for(let i =0;i<list.length;i++) 
+{   
+
+    let jrt= `cul${i}`
+    jrt = String(jrt)
+    
+    let cul = document.getElementById(jrt)
+    if(cul)
+    {
+    if(list[i].cul==0)
+    cul.style.backgroundColor="rgb(248, 244, 244)"
+    else
+    cul.style.backgroundColor="rgb(127, 180, 129)"
+    }
+    
+}
+
 }
     
 
@@ -67,7 +89,7 @@ const delete2 = (p)=>{
 form.addEventListener('click',(event)=>{
     
     const details = car.value
-    list.push({details, ok:1})
+    list.push({details, ok:1, cul:0})
     
     
     localStorage.setItem("New Item", JSON.stringify(list))
@@ -79,7 +101,13 @@ form.addEventListener('click',(event)=>{
 })
 
 
-
+const change = (i)=>{
+    list[i].cul=1
+    localStorage.setItem("New Item", JSON.stringify(list))
+    apv.innerHTML=""
+        start()
+    
+}
 
 
 start()
