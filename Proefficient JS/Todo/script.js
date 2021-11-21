@@ -1,32 +1,23 @@
 const form = document.querySelector(".miau")
 const car = document.querySelector(".car")
 const apv = document.querySelector(".tasks")
-const but = document.querySelector(".but")
+
+
+let ok = []
 
 
 
 
-const trim = (lis)=>{
-    let tag = document.createElement("div")
-    tag.classList.add('task');
 
-    let text = document.createElement("p")
-    text.classList.add('scris')
 
-    let but = document.createElement("button")
-    but.classList.add('but', 'bi', 'bi-trash');
+
+
+// if(cer)
+// cer.addEventListener('click',(event)=>{
+//      console.log("ceaw")
     
+// })
 
-
-    tag.appendChild(text)
-    text.innerHTML = lis
-    tag.appendChild(text)
-    tag.appendChild(but)
-
-
-    console.log(tag)
-    apv.appendChild(tag)
-}
 
 
 const start = ()=>{
@@ -39,10 +30,36 @@ const start = ()=>{
      
     }
     
-
+    p=0
+    let but = "";
     list.forEach((lis)=>{
-        trim(lis)
+
+       
+
+  
+  
+     if(lis['ok']==1)
+     {
+     but =but + `<div class="task">
+    <p class="scris">${lis['details']}</p>
+    <button class="but bi bi-trash" onClick="delete2(${p})" type="button"></button>
+    </div>`
+     }
+        p++
+   
     })
+    apv.innerHTML = but
+  
+}
+    
+
+const delete2 = (p)=>{
+    console.log(p)
+  
+    list[p].ok=0
+    localStorage.setItem("New Item", JSON.stringify(list))
+    apv.innerHTML=""
+        start()
 }
 
 
@@ -50,11 +67,13 @@ const start = ()=>{
 form.addEventListener('click',(event)=>{
     
     const details = car.value
-    list.push(details)
+    list.push({details, ok:1})
+    
     
     localStorage.setItem("New Item", JSON.stringify(list))
     apv.innerHTML=""
-    start()
+        start()
+    
 
 
 })
@@ -64,3 +83,11 @@ form.addEventListener('click',(event)=>{
 
 
 start()
+
+
+
+
+
+
+
+
