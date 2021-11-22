@@ -10,8 +10,8 @@ const circle={
     x:500,
     y:200,
     size:30,
-    dx: 10,
-    dy:10,
+    dx: 20,
+    dy:20,
 }
 
 const moveRight = ()=>{
@@ -24,7 +24,7 @@ const moveUp = ()=>{
     circle.y -= circle.dy
 }
 const moveDown = ()=>{
-    circle.y -= circle.dy
+    circle.y += circle.dy
 }
 
 
@@ -43,6 +43,14 @@ c.fill();
      c.clearRect(0,0,canvas.width, canvas.height)
      draw()
      
+     if(circle.x<1500 && circle.x>1400 && circle.y<500&& circle.y>400)
+     {
+        window.location.replace("../bile/index.html");
+
+
+     }
+c.fillStyle = 'brown'
+c.fillRect(1400, 400, 150, 100)
 
      requestAnimationFrame(update)
 
