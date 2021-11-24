@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    
+}
+
+
+#movie{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color: beige;
+}
+img{
+    width:292px;
+    height: 450px;
+    
+    
+}
+.mov{
+    margin: 25px;
+}
+.title{
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.idea{
+    display: flex;
+    width: 100%;
+    background-color: bisque;
+    height: 50px;
+    align-items: center;
+    position: relative;
+}
+.st{
+    position: absolute;
+    right: 10px;
+    
+    
+}
+.dr{
+    margin-left: 10px;
+}
