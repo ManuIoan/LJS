@@ -1,0 +1,10 @@
+{
+"name":"John",
+"age": 18,
+"education": "College",
+"skills":[
+    "HTML5", "CSS3", "Vanilla JavaScript","React"
+],
+"accept":true 
+
+}
