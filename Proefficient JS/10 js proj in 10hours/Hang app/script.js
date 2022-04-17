@@ -1,6 +1,6 @@
 /** @format */
 
-const keys = ["carrnec", "branza", "orhidee", "alin", "putere"];
+const keys = ["informatica", "web", "react", "javascript", "sql"];
 one = document.querySelector(".one");
 two = document.querySelector(".two");
 three = document.querySelector(".three");

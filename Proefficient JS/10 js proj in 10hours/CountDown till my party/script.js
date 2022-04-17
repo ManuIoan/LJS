@@ -1,4 +1,4 @@
-let then = new Date(2022, 2, 9, 0, 0)
+let then = new Date(2022, 7, 19, 0, 0)
 an = document.querySelector(".an")
 luna = document.querySelector(".luna")
 zile = document.querySelector(".zile")
@@ -48,6 +48,9 @@ let sec2 = 59-now.getSeconds()
 
 
 console.log(h)
+if(y<0)
+an.innerHTML="0";
+else
 an.innerHTML= y
 luna.innerHTML= m
 zile.innerHTML= z

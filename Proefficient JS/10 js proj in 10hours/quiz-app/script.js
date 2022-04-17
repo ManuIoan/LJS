@@ -9,39 +9,39 @@ const cioc = document.querySelector("#c");
 // })
 const nm = [
   {
-    q: "Ce faci?",
-    a: "Caut comori",
-    b: "Beau",
-    c: "Mananc",
-    d: "Dorm",
+    q: "Which one has been developed by Facebook?",
+    a: "React",
+    b: "Laravel",
+    c: "Vue",
+    d: "Angular",
   },
   {
-    q: "Ce fffaci?",
-    a: "Caut fdcomori",
-    b: "Beadddfu",
-    c: "Mananc",
-    d: "Dorfm",
+    q: "How can you NOT get a job?",
+    a: "Getting a CS diploma",
+    b: "Bootcamp",
+    c: "Doing nothing",
+    d: "Self learning",
   },
   {
-    q: "Ce fafsdfci?",
-    a: "Caut fsdfcomori",
-    b: "Beafdsfu",
-    c: "Manadffsdnc",
-    d: "Dorm",
+    q: "Which one is not a variable declaration used in JS?",
+    a: "const",
+    b: "var",
+    c: "let",
+    d: "int",
   },
   {
-    q: "Ce fdsfsfaci?",
-    a: "Cautsdfs comori",
-    b: "Beafdsfu",
-    c: "Mandsfsdanc",
-    d: "Dorfdsfm",
+    q: "Which programming language is most used?",
+    a: "Javascript",
+    b: "C/C++",
+    c: "Python",
+    d: "Java",
   },
   {
-    q: "Ce fdaci?",
-    a: "Caut comori",
-    b: "Beafdu",
-    c: "Mananc",
-    d: "Dordm",
+    q: "What does DSA stand for in CS?",
+    a: "Decimal Shift & Add",
+    b: "Decision Support Access",
+    c: "Data structures and algothms",
+    d: "Development Studies Association",
   },
 ];
 
@@ -53,10 +53,16 @@ const corect = [
     c4: false,
   },
   {
-    c1: true,
+    c1: false,
+    c2: false,
+    c3: true,
+    c4: false,
+  },
+  {
+    c1: false,
     c2: false,
     c3: false,
-    c4: false,
+    c4: true,
   },
   {
     c1: true,
@@ -65,15 +71,9 @@ const corect = [
     c4: false,
   },
   {
-    c1: true,
+    c1: false,
     c2: false,
-    c3: false,
-    c4: false,
-  },
-  {
-    c1: true,
-    c2: false,
-    c3: false,
+    c3: true,
     c4: false,
   },
   
@@ -127,7 +127,7 @@ const change = () => {
 <div class="b">
           <button type="submit" onclick="change()" id="c">Trimite</button>
         </div>`;
-    p.innerHTML = `<div class="q">
+    p.innerHTML = `<div class="qsq">
 <p>${nm[i].q}</p>
 </div>`;
 
@@ -169,6 +169,6 @@ mang.innerHTML = `<div class="a">
 <div class="b">
           <button type="submit" onclick="change()" id="c">Trimite</button>
         </div>`;
-p.innerHTML = `<div class="q">
+p.innerHTML = `<div class="qsq">
 <p>${nm[i].q}</p>
 </div>`;

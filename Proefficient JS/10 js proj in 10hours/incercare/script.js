@@ -45,7 +45,7 @@ c.fill();
      
      if(circle.x<1500 && circle.x>1400 && circle.y<500&& circle.y>400)
      {
-        window.location.replace("../bile/index.html");
+        window.location.replace("bile/index.html");
 
 
      }
